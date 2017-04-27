@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { MainRoutes } from './main.router';
+import { RouterModule } from '@angular/router'; 
 
 import { MainComponent } from './component/main/main.component';
 import { HomeComponent } from './component/home/home.component';
@@ -17,7 +18,8 @@ import { HomeComponent } from './component/home/home.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MainRoutes
+    MainRoutes,
+    RouterModule
   ],
   providers: [],
   bootstrap: [MainComponent]

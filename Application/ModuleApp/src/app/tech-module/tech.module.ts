@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { TechRoutes } from "./tech.router";
+import { RouterModule } from '@angular/router'; 
 
 import { TechComponent } from './component/tech/tech.component';
 import { FrameworkComponent } from './component/framework/framework.component';
@@ -14,7 +15,8 @@ import { FrameworkComponent } from './component/framework/framework.component';
   imports: [
     FormsModule,
     HttpModule,
-    TechRoutes
+    TechRoutes,
+    RouterModule
   ],
   providers: [],
   bootstrap: [TechComponent]

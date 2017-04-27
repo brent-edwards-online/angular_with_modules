@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AuthRoutes } from "./auth.router";
+import { RouterModule } from '@angular/router'; 
 
 import { LoginComponent } from './component/login/login.component';
 import { AuthComponent } from './component/auth/auth.component';
@@ -18,9 +19,11 @@ import { LogoutComponent } from './component/logout/logout.component';
   imports: [
     FormsModule,
     HttpModule,
-    AuthRoutes
+    AuthRoutes,
+    RouterModule
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AuthComponent]
 })
 export class AuthModule { }

@@ -1,32 +1,28 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
-import { AppComponent } from './app.component';
+import { MainComponent } from './main.component';
 
-describe('AppComponent', () => {
+describe('MainComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule], // Import this to fix <router-outlet> is not a known element error
       declarations: [
-        AppComponent
+        MainComponent
       ],
     }).compileComponents();
   }));
 
   it('should create the app', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(MainComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app works!'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it(`should have as title 'Main App Works!'`, async(() => {
+    const fixture = TestBed.createComponent(MainComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app works!');
+    expect(app.title).toEqual('Main App Works!');
   }));
 
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
-  }));
 });
